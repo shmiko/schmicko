@@ -50,6 +50,12 @@ angular.module("cmFramework").controller("cmFrameworkController",
                 // $scope.$apply();
             };
 
+            $scope.menuButtonClicked2 = function () {
+                $scope.isMenuVisible = !$scope.isMenuVisible;
+                broadcastMenuState();
+                $scope.$apply();
+            };
+
             var broadcastMenuState = function () {
                 $rootScope.$broadcast('cm-menu-show',
                     {
