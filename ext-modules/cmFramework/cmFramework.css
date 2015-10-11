@@ -225,6 +225,7 @@
 .cm-user-profile-small {
     color: #333;
     padding-top: 4px;
+    display:none;
 }
 
 .cm-user-profile-small > span {
