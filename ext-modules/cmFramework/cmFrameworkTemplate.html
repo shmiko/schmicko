@@ -1,0 +1,44 @@
+﻿﻿
+<div class="cm-title-bar">
+    <div class="row">
+        <div class="cm-logo-area col-sm-6">
+            <img class="cm-icon" ng-src="{{ iconFile }}" />
+            <div class="cm-title-area">
+                <p class="cm-logo-title">{{ title }}</p>
+                <p class="cm-logo-subtitle">{{ subtitle }}</p>
+            </div>
+
+            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()"
+                 class="cm-collacmed-menu pull-right">
+                <button type="button" class="btn cm-nav-button">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="cm-right-side-controls col-sm-6">
+            <!-- <div>
+                <button class="btn btn-primary">Button 1</button>
+                <button class="btn btn-success">Button 2</button>
+                <button class="btn btn-warning">Button 3</button>
+            </div> -->
+            <!--<cm-control></cm-control>-->
+            <cm-user-profile-small></cm-user-profile-small>
+        </div>
+    </div>
+</div>
+
+<div class="cm-menu-area"
+     ng-show="isMenuVisible"
+     ng-class="{'cm-menu-area-vertical': isMenuVertical, 'cm-menu-area-horizontal': !isMenuVertical}">
+    <cm-user-profile></cm-user-profile>
+    <ng-transclude></ng-transclude>
+</div>
+
+<!-- <ng-transclude></ng-transclude>-->
+
+<div ng-view class="cm-view"
+        ng-class="{'cm-view-full-width': !isMenuVertical || !isMenuVisible}">
+</div>
+

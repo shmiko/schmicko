@@ -1,0 +1,42 @@
+<div class="wwa-weather-widget">
+    <div class="wwa-weather-heading">
+        <img class="wwa-weather-icon" ng-src="images/therm-icon.png" alt="thermometer" />
+        <span class="www-weather-title">Weather</span>
+    </div>
+    <div class="wwa-weather-body">
+
+<!-- 
+    ng-style="selectedLocation != null && {'background-image': 'url(/images/' + selectedLocation.image + ')'}">
+        <div ng-if="!isLoaded && !hasError"
+ -->        
+ 
+            <!--<i class="fa fa-refresh fa-2x fa-spin"></i>-->
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </div>
+        <div>
+         <!-- ni-if="isLoaded" class="wwa-weather-view" > -->
+            <p>
+                <a href="#/">Back to Search</a>
+            </p>
+
+            Forecast for {{ city }}
+            <!--<hr />-->
+            <!--Days: <a href="#/wwaWeatherTemplate/2" ng-class="{ 'bg-primary': days === '2' }">2</a> | <a href="#/wwaWeatherTemplate/5" ng-class="{ 'bg-primary': days === '5' }">5</a> | <a href="#/wwaWeatherTemplate/7" ng-class="{ 'bg-primary': days === '7' }">7</a>-->
+            <!--<hr />-->
+            <div ng-repeat="w in weatherResult.list">
+                <div class="row">
+                    <div class="col-md-12">
+                        <wwa-weather weather-day="w" convert-to-standard="convertToFahrenheit(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="MMMM d, y"></wwa-weather>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+         <!-- ng-if="hasError"> -->
+            <h4>Error loading widget.</h4>
+            <button class="btn btn-primary">
+             <!-- ng-click="loadlocation()"> -->
+             Reload</button>
+        </div>
+    </div>
+</div>

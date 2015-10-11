@@ -1,0 +1,11 @@
+﻿
+<li class="cm-selectable-item" ng-class="{'cm-item-horizontal': !isVertical()}">
+    <div class="cm-noselect">
+        <i class="fa {{icon}} cm-menu-icon"></i>
+        {{label}}
+    </div>
+    <i ng-if="isActive() && isVertical()"
+       class="fa fa-2x fa-caret-left cm-menu-active-indicator"></i>
+</li>
+
+

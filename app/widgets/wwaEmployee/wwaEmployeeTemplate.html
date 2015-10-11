@@ -1,0 +1,47 @@
+﻿
+<div class="wwa-employee-widget">
+    <div class="wwa-employee-heading">
+        &nbsp;
+        <i class="fa fa-eye 2x"></i>
+        <!--<img class="wwa-employee-icon" ng-src="images/employee.png" alt="employee" />-->
+        <span class="www-employee-title">Itinerary</span>
+    </div>
+    <!--<div class="wwa-employee-body">-->
+        <!--<div class="wwa-employee-row">-->
+            <!--&lt;!&ndash;<div class="wwa-employee-name-area">&ndash;&gt;-->
+                <!--&lt;!&ndash;<h4>Monday 4th Dec</h4>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p>{{selectedEmployee.name}}</p>&ndash;&gt;-->
+                <!--&lt;!&ndash;<h4>Accomodation</h4>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p>{{selectedEmployee.location}}</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--<div ni-if="isLoaded" class="wwa-employee-view">-->
+                <!--<h4>Monday 3rd Dec</h4>-->
+                <!--<p>{{selectedEmployee.name}}</p>-->
+                <!--<h4>Accomodation</h4>-->
+                <!--<p>{{selectedEmployee.location}}</p>-->
+            <!--</div>-->
+
+            <!--<div class="wwa-employee-picture-area" ng-style="selectedEmployee != null && {'background-image': 'url(/images/' + selectedEmployee.image + ')'}">-->
+            <!--</div>-->
+
+        <!--</div>-->
+
+    <!--</div>-->
+    <div class="wwa-temperature-body" ng-style="selectedEmployee != null && {'background-image': 'url(/images/' + selectedEmployee.image + ')'}">
+        <div ng-if="!isLoaded && !hasError">
+            <!--<i class="fa fa-refresh fa-2x fa-spin"></i>-->
+            <!--<md-progress-circular md-mode="indeterminate"></md-progress-circular>-->
+        </div>
+        <div ni-if="isLoaded" class="wwa-temperature-view">
+            <div class="wwa-temperature-river-name">
+                {{ selectedEmployee.name }}
+            </div>
+            <div class="wwa-temperature-degrees">
+                {{ selectedEmployee.location }}º
+            </div>
+        </div>
+        <!--<div ng-if="hasError">-->
+            <!--<h4>Error loading widget.</h4>-->
+            <!--<button class="btn btn-primary" ng-click="loadlocation()">Reload</button>-->
+        <!--</div>-->
+    </div>

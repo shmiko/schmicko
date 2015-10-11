@@ -1,0 +1,31 @@
+﻿
+<div class="wwa-temperature-widget">
+
+    <div class="wwa-temperature-heading">
+        <!--<span class="glyphicon glyphicon-calendar wwa-temperature-icon"  alt="calendar" />Calendar</span>-->
+        <!-- wwa-temperature-icon ng-src="images/therm-icon.png"-->
+        <!--<span class="glyphicon glyphicon-calendar"></span>-->
+            <span class="www-temperature-icon">Calendar</span>
+    </div>
+
+    <div class="wwa-temperature-body" ng-style="selectedLocation != null && {'background-image': 'url(/images/' + selectedLocation.image + ')'}">
+        <div ng-if="!isLoaded && !hasError">
+            <!--<i class="fa fa-refresh fa-2x fa-spin"></i>-->
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </div>
+        <div ni-if="isLoaded" class="wwa-temperature-view1">
+            <div class="wwa-temperature-river-name1">
+                {{ selectedLocation.name }}
+            </div>
+            <div class="wwa-temperature-degrees1">
+                {{ selectedLocation.temperature }}º
+            </div>
+        </div>
+        <div ng-if="hasError">
+            <h4>Error loading widget.</h4>
+            <button class="btn btn-primary" ng-click="loadlocation()">Reload</button>
+        </div>
+    </div>
+
+</div>
+

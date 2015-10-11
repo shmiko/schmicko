@@ -1,0 +1,32 @@
+<div class="wwa-map-widget">
+
+    <div class="wwa-map-heading">
+        <img class="wwa-map-icon" ng-src="images/therm-icon.png" alt="thermometer" />
+        <span class="www-map-title">Map</span>
+    </div>
+
+    <div class="wwa-map-body" ng-style="selectedLocation != null && {'background-image': 'url(/images/' + selectedLocation.image + ')'}">
+        <div ng-if="!isLoaded && !hasError">
+            <!--<i class="fa fa-refresh fa-2x fa-spin"></i>-->
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </div>
+        <div ni-if="isLoaded" class="wwa-map-view">
+            <ui-gmap-google-map
+                    center="map.center" zoom="map.zoom" options="map.options">
+                <ui-gmap-marker idKey="marker.id" coords="marker.coords" options="marker.options"></ui-gmap-marker>
+
+            </ui-gmap-google-map>
+            <div class="wwa-map-river-name">
+                {{ selectedLocation.name }}
+            </div>
+            <div class="wwa-map-degrees">
+                {{ selectedLocation.map }}º
+            </div>
+        </div>
+        <div ng-if="hasError">
+            <h4>Error loading widget.</h4>
+            <button class="btn btn-primary" ng-click="loadlocation()">Reload</button>
+        </div>
+    </div>
+
+</div>

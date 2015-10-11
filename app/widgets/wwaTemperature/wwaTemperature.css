@@ -1,0 +1,76 @@
+﻿
+
+.wwa-temperature-widget {
+    height: 100%;
+    width: 100%;
+    min-height: 180px;
+    font-size: 16px;
+    color: black;
+}
+
+.wwa-temperature-heading {
+    background-color: #9ba112;
+    color: #101010;
+    height: 32px;
+    padding-top: 2px;
+    font-size: 18px;
+    /*margin-left:2px;*/
+    font-weight: bold;
+    /*line-height: 12px;*/
+    /*margin-bottom: 3px;*/
+}
+
+.wwa-temperature-icon {
+    height: 44px;
+    width: 24px;
+    margin-top: -2px;
+    left: 4px;
+    margin-bottom: 2px !important;
+    /*content:"\e063";*/
+}
+
+.wwa-temperature-body {
+    position: absolute;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    min-height: 180px;
+}
+
+.wwa-temperature-body .fa-spin {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.wwa-temperature-view1 {
+    background-color: rgba(238, 154, 0, 0.7);
+    position: absolute;
+    right: 5px;
+    bottom: 38px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.wwa-temperature-river-name1 {
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.wwa-temperature-degrees1 {
+    font-size: 64px;
+    margin-top: -20px;
+    color: #1c0328;
+}
+
+.progressCirculardemoBasicUsage body {
+    padding: 20px; }
+.progressCirculardemoBasicUsage h4 {
+    margin: 10px 0; }
+.progressCirculardemoBasicUsage md-progress-circular {
+    margin-bottom: 20px; }

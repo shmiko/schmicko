@@ -1,0 +1,206 @@
+﻿﻿<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Schmicko</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href="/content/bootstrap.css" rel="stylesheet" />
+        <link href="/bower_components/fullcalendar/fullcalendar.css" rel="stylesheet"/>
+        <link href="/content/font-awesome.min.css" rel="stylesheet" />
+        <link href="/content/angular-gridster.min.css" rel="stylesheet" />
+        <link href="/dist/cmFramework.css" rel="stylesheet" />
+        <link href="demo.css" rel="stylesheet"/>
+        <!--content/bootstrap.css-->
+        <!--Material Design-->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+        <link href="/app/app.css" rel="stylesheet" />
+
+        <!--ex module css-->
+        <link href="ext-modules/cmFramework/cmFramework.css" rel="stylesheet" />
+        <link href="ext-modules/cmMenu/cmMenu.css" rel="stylesheet" />
+
+        <!-- widget css -->
+        <link href="/app/widgets/wwaTemperature/wwaTemperature.css" rel="stylesheet" />
+        <link href="/app/widgets/wwaInventory/wwaInventory.css" rel="stylesheet" />
+        <link href="/app/widgets/wwaEmployee/wwaEmployee.css" rel="stylesheet" />
+        <link href="/app/widgets/wwaMap/wwaMap.css" rel="stylesheet" />
+        <link href="/app/widgets/wwaWeather/wwaWeather.css" rel="stylesheet" />
+        <link href="/app/static/tests.css" rel="stylesheet" />
+        <!--<link href="/app/static/test_background.css" rel="stylesheet" />-->
+
+        <link href="ext-modules/cmDashboard/cmDashboard.css" rel="stylesheet" />
+
+        <!-- Vendor Scripts -->
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+        <script src="/bower_components/moment/min/moment.min.js"></script>
+        <script src="/bower_components/angular/angular.min.js"></script>
+        <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="/bower_components/angular-route/angular-route.min.js"></script>
+        <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="/bower_components/angular-ui-calendar/src/calendar.js"></script>
+        <script src="/bower_components/fullcalendar/fullcalendar.js"></script>
+        <script src="/bower_components/fullcalendar/gcal.js"></script>
+        <!--<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>-->
+        <script src="/bower_components/lodash/dist/lodash.min.js"></script>
+        <script src="/bower_components/spin.js/spin.js"></script>
+        <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="/bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+
+        <script src="/bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+        <script src="/bower_components/angular-ui-ace/ui-ace.min.js"></script>
+        <script src="/bower_components/showdown/compressed/Showdown.js"></script>
+        <script src="/bower_components/angular-ui-grid/ui-grid.min.js"></script>
+        <script src="/bower_components/csv-js/csv.js"></script>
+        <script src="/bower_components/angular-ui-select/dist/select.min.js"></script>
+        <script src="/bower_components/angular-ui-alias/src/alias.js"></script>
+
+         <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+        <!--<script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>-->
+        <!--<script src="bower_components/angular/angular.min.js"></script>-->
+        <script src="/bower_components/angular-gridster.min.js"></script>
+        <script src="/bower_components/bootstrap.min.js"></script>
+        <script src="/bower_components/angular-aria/angular-aria.js"></script>
+        <script src="/bower_components/angular-material/angular-material.js"></script>
+        <script src="/bower_components/angular-resource/angular-resource.js"></script>
+
+        <!--<script src="bower_components/angular-ui/ui-bootstrap-tpls.min.js"></script>-->
+        <!--<script src="bower_components/angular-ui-calendar/src/calendar.js"></script>-->
+        <!--<script src="bower_components/fullcalendar/fullcalendar.js"></script>-->
+        <script src="/Scripts/ngStorage.min.js"></script>
+
+        <!--ex module files-->
+        <script src="ext-modules/cmMenu/cmMenuModule.js"></script>
+        <script src="ext-modules/cmMenu/cmMenuController.js"></script>
+        <script src="ext-modules/cmMenu/cmMenuDirective.js"></script>
+        <!--<script src="ext-modules/cmMenu/cmMenuItemDirective.js"></script>-->
+        <!--<script src="ext-modules/cmMenu/cmMenuGroupDirective.js"></script>-->
+        <!--<script src="ext-modules/cmDashboard/cmDashboardModule.js"></script>-->
+        <!--<script src="ext-modules/cmDashboard/cmDashboardDirective.js"></script>-->
+        <!--<script src="ext-modules/cmDashboard/cmWidgetBodyDirective.js"></script>-->
+
+        <!--<script src="ext-modules/cmFramework/cmFrameworkModule.js"></script>-->
+        <!--<script src="ext-modules/cmFramework/cmFrameworkController.js"></script>-->
+        <!--<script src="ext-modules/cmFramework/cmFrameworkDirective.js"></script>-->
+        <!--<script src="ext-modules/cmFramework/cmUserProfile/cmUserProfileSmallDirective.js"></script>-->
+        <!--<script src="ext-modules/cmFramework/cmUserProfile/cmUserProfileDirective.js"></script>-->
+        <!--<script src="ext-modules/cmFramework/cmControl/cmControlDirective.js"></script>-->
+
+        <script src="/dist/cmFramework.js"></script>
+
+        <script src="/app/appModule.js"></script>
+        <script src="/app/appConfig.js"></script>
+        <script src="/app/appRouteConfig.js"></script>
+        <script src="/app/appController.js"></script>
+        <script src="/app/directives/wwaCalendarDirective/calendarController.js"></script>
+        <!--<script src="/app/directives/wwaMapsDirective/mapController.js"></script>-->
+        <script src="/app/directives/wwaWeatherDirective/weathersController.js"></script>
+        <!--<script src="app/directives/wwaWeatherDirective/directives/weatherReport.html"></script>-->
+        <script src="/app/services/dataService.js"></script>
+        <script src="/app/services/weatherService.js"></script>
+        <!--<script src="app/static/materialController.js"></script>-->
+        <!-- Directives JavaScript files-->
+        <!--<script src="app/directives/wwaMapsDirective/mapController.js"></script>-->
+        <script src="/app/directives/wwaDashboardDirective.js"></script>
+        <script src="/app/directives/wwaMapsDirective/wwaMapsDirective.js"></script>
+        <script src="/app/directives/wwaCalendarDirective/wwaCalendarDirective.js"></script>
+        <script src="/app/directives/wwaTestsDirective.js"></script>
+        <script src="/app/directives/wwaColorsDirective/wwaColorsDirective.js"></script>
+        <script src="/app/directives/wwaWeatherDirective/wwaWeatherDirective.js"></script>
+        <script src="/app/directives/cmLayoutDirective/cmLayoutDirective.js"></script>
+        <!--<script src="/app/sticky-footer.js"></script>-->
+        <script src="/app/directives/angularStickyHeader.js"></script>
+
+        <!-- widget JavaScript files -->
+        <script src="/app/widgets/wwaTemperature/wwaTemperatureDirective.js"></script>
+        <script src="/app/widgets/wwaInventory/wwaInventoryDirective.js"></script>
+        <script src="/app/widgets/wwaEmployee/wwaEmployeeDirective.js"></script>
+        <script src="/app/widgets/wwaMap/wwaMapDirective.js"></script>
+        <script src="/app/widgets/wwaWeather/wwaWeatherDirective.js"></script>
+        <script src="/app/directives/cmLayoutDirective/layoutController.js"></script>
+
+        <!-- setting dialogs -->
+        <script src="/app/dialogs/wwaSelectEmployeeController.js"></script>
+        <script src="/app/dialogs/wwaSelectLocationController.js"></script>
+        <!-- // <script src="/app/dialogs/wwaSelectWeatherLocationController.js"></script> -->
+        <!--<script src="modalModule.js"></script>-->
+        <script src="modalModule.js"></script>
+        <!--<script src="/app/static/background.js"></script>-->
+    </head>
+    <body class="container-fluid" ng-controller="appController">
+
+        <main ng-switch on="state">
+            <section ng-switch-when="unauthorised" class="sign-in-form">
+                <h2>Schmicko</h2>
+                <h4>Sign In</h4>
+                <form>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control"/>
+                    </div>
+                </form>
+                <button class="btn btn-default" ng-click="signIn()">Sign In</button>
+            </section>
+            <section ng-switch-default>
+                <cm-framework title="Paul Jones"
+                              subtitle="An Introduction"
+                              icon-file="images/calmapit_icon_55.png">
+                    <cm-menu>
+                        <!--<cm-menu-item label="Trip Boards" icon="fa-dashboard" route="dashboard"></cm-menu-item>-->
+                        <cm-menu-group label="This is Me" icon="fa-gears">
+                            <cm-menu-item label="Where Am I" icon="fa-user" route="tests"></cm-menu-item>
+                            <cm-menu-item label="Where Am I Going" icon="fa-unlink" route="colors"></cm-menu-item>
+
+                        </cm-menu-group>
+                        <!--<cm-menu-item label="Calendar" icon="fa-location-arrow" route="cal"></cm-menu-item>-->
+                        <cm-menu-group label="Experience?" icon="fa-gears">
+                            <cm-menu-item label="Recent Work History" icon="fa-user" route="maps"></cm-menu-item>
+                            <cm-menu-item label="Personal Projects" icon="fa-unlink" route="colors"></cm-menu-item>
+
+                        </cm-menu-group>
+                        <!--<cm-menu-item label="Map" icon="fa-car" route="maps"></cm-menu-item>-->
+                        <cm-menu-group label="Still Studying!" icon="fa-gears">
+                            <cm-menu-item label="Towards Certification" icon="fa-user" route="tests"></cm-menu-item>
+                            <cm-menu-item label="Need to Know" icon="fa-unlink" route="colors"></cm-menu-item>
+                            <cm-menu-item label="Becasue I can" icon="fa-magic" route="weathers"></cm-menu-item>
+
+                        </cm-menu-group>
+                        <cm-menu-group label="Things I've Done!" icon="fa-gears">
+                            <cm-menu-item label="Professional Acomplishments" icon="fa-user" route="back"></cm-menu-item>
+                            <cm-menu-item label="Personal Acomplishments" icon="fa-unlink" route="colors"></cm-menu-item>
+
+                        </cm-menu-group>
+                        <cm-menu-group label="Contact" icon="fa-gears">
+                            <cm-menu-item label="Details" icon="fa-user" route="tests"></cm-menu-item>
+                            <cm-menu-item label="Professional Networks" icon="fa-unlink" route="colors"></cm-menu-item>
+                            <cm-menu-item label="Social Networks" icon="fa-magic" route="weathers"></cm-menu-item>
+
+                        </cm-menu-group>
+
+                    </cm-menu>
+                </cm-framework>
+            </section>
+        </main>
+        <!--<div class="footer" sticky-footer=".wrapper"><span label="Help" icon="fa-location-arrow" route="cal"></span></div>-->
+        <footer class="footer-main">
+            <!--<cm-menu-item label="?" route="tests" alt="help" class="footer-text"></cm-menu-item>-->
+            <!--<a href="#tests" class="footer-text fa fa-question"> &nbsp;</a>-->
+            <!--<span label="Help" icon="fa-location-arrow" route="cal" style="color:red;"></span>-->
+            <a class="footer-main-span" href="#tests" icon="fa-magic" route="weathers">&nbsp;Help</a>
+        </footer>
+        <!--<footer class="footer">-->
+        <!--<section>-->
+        <!--<span label="Help" icon="fa-location-arrow" route="cal"></span>-->
+        <!--<span label="Settings" icon="fa-location-arrow" route="cal"></span>-->
+        <!--<span label="Login" icon="fa-location-arrow" route="cal"></span>-->
+        <!--<span label="Profile" icon="fa-location-arrow" route="cal"></span>-->
+        <!--</section>-->
+        <!--</footer>-->
+    </body>
+
+</html>
