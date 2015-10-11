@@ -161,9 +161,11 @@
     }
 }
 
-.cm-collacmed-menu {
+.cm-collapsed-menu {
     display: inline-block;
     height: 100%;
+    right: 420px;
+    position: fixed;
 }
 
 .cm-nav-button {
