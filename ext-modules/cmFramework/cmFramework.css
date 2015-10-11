@@ -181,10 +181,12 @@
     background-color: #ccc;
     min-height: 100vh;
     overflow: auto;
+    /*width:100%;*/
 }
 
 .cm-view-full-width {
     margin-left: 0;
+    width: 100%;
 }
 
 
@@ -360,9 +362,17 @@
     opacity: 10;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (max-width: 768px){
     .cm-logo-area {
         text-align: left;
-        left: 400px;
+        /*left: 400px;*/
     }
+
+    .cm-title-bar {
+        background-color: #D63F3F;
+        height: 140px;
+        border-bottom: 2px solid black;
+        /*width: 668px;*/
+    }
+
 }

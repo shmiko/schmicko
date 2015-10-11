@@ -10,26 +10,26 @@ var nodemon = require('gulp-nodemon');
 gulp.task('buildMenuTemplateCache', function () {
     return gulp
         .src([
-            './ext-modules/psMenu/**/*.html'
+            './ext-modules/cmMenu/**/*.html'
         ])
         .pipe(templateCache({
-            root: 'ext-modules/psMenu/',
-            module: 'psMenu'
+            root: 'ext-modules/cmMenu/',
+            module: 'cmMenu'
         }))
-        .pipe(gulp.dest('./ext-modules/psMenu/'))
+        .pipe(gulp.dest('./ext-modules/cmMenu/'))
         ;
 });
 
 gulp.task('buildDashboardTemplateCache', function () {
     return gulp
         .src([
-            './ext-modules/psDashboard/**/*.html'
+            './ext-modules/cmDashboard/**/*.html'
         ])
         .pipe(templateCache({
-            root: 'ext-modules/psDashboard/',
-            module: 'psDashboard'
+            root: 'ext-modules/cmDashboard/',
+            module: 'cmDashboard'
         }))
-        .pipe(gulp.dest('./ext-modules/psDashboard/'))
+        .pipe(gulp.dest('./ext-modules/cmDashboard/'))
         ;
 });
 
@@ -37,13 +37,13 @@ gulp.task('buildDashboardTemplateCache', function () {
 gulp.task('buildFrameworkTemplateCache', function () {
     return gulp
         .src([
-            './ext-modules/psFramework/**/*.html'
+            './ext-modules/cmFramework/**/*.html'
         ])
         .pipe(templateCache({
-            root: 'ext-modules/psFramework/',
-            module: 'psFramework'
+            root: 'ext-modules/cmFramework/',
+            module: 'cmFramework'
         }))
-        .pipe(gulp.dest('./ext-modules/psFramework/'))
+        .pipe(gulp.dest('./ext-modules/cmFramework/'))
         ;
 });
 
@@ -54,7 +54,7 @@ gulp.task('buildJavaScript', function () {
         ])
         .pipe(angularFilesort())
         .pipe(strip(["use strict"]))
-        .pipe(concat('psFramework.js'))
+        .pipe(concat('cmFramework.js'))
         .pipe(gulp.dest('./dist/'))
         ;
 });
@@ -64,7 +64,7 @@ gulp.task('buildCSS', function () {
         .src([
             './ext-modules/**/*.css'
         ])
-        .pipe(concat('psFramework.css'))
+        .pipe(concat('cmFramework.css'))
         .pipe(gulp.dest('./dist/'))
         ;
 });
