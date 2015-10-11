@@ -102,6 +102,13 @@ angular.module('app')
             }
         },
         {
+            url: '/resume',
+            config: {
+                templateUrl: 'app/resume.html'
+
+            }
+        },
+        {
             url: '/layout',
             config: {
                 template: '<cm-layout></cm-layout>'
