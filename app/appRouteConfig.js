@@ -114,7 +114,7 @@ angular.module('app')
         $routeProvider.when(route.url, route.config);
     });
 
-    $routeProvider.otherwise({ redirectTo: '/colors' });
-    //$routeProvider.otherwise({ redirectTo: '/dashboard' });
+    // $routeProvider.otherwise({ redirectTo: '/colors' });
+    $routeProvider.otherwise({ redirectTo: '/dashboard' });
 
 }]);
