@@ -104,7 +104,8 @@ angular.module('app')
         {
             url: '/resume',
             config: {
-                templateUrl: 'app/resume.html'
+                templateUrl: '/resume.html',
+                controller: 'resume'
 
             }
         },
