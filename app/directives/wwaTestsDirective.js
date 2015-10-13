@@ -12,7 +12,5 @@ angular.module('app')
     .controller('testsController', ['$scope',
         function($scope) {
 
-
-
         }
     ]);
