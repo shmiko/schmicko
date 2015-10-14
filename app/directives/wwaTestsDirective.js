@@ -9,6 +9,7 @@ angular.module('app')
             templateUrl: 'app/static/tests.html'
         }
     }])
+    //fix up wwa
     .controller('testsController', ['$scope',
         function($scope) {
         }
